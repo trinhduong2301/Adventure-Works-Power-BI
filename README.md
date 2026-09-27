@@ -1,29 +1,73 @@
-**#1. Adventure-Works-Power-BI**
+# AdventureWorks Sales Performance Dashboard | Power BI
 
-Sales dashboard built with the Adventure Works DW 2017-2020 dataset, analyzing sales performance by channel (Internet vs. Reseller) during FY2017–FY2019.
+Interactive Power BI dashboard analyzing AdventureWorks' sales and profitability across its two sales channels (Internet vs. Reseller), FY2017–FY2019, to help management understand where revenue comes from and — more importantly — where it's actually profitable.
 
-**#2. Business Context & Objective**
+![Dashboard overview]
 
-The dashboard answers: how sales/profit trended across fiscal years, which channel (Internet or Reseller) performed better, which products/countries led.
+<img width="599" height="335" alt="image" src="https://github.com/user-attachments/assets/a85514ab-fdd4-4483-b4cd-3bd3e75f0790" />
 
-**#3. Dataset**
+## Business Objective
+This dashboard answers three questions for management:
+- How did sales and profit trend across fiscal years?
+- Which channel — Internet (direct-to-consumer) or Reseller (wholesale) — is actually more profitable?
+- Which products, countries, and customers drive the business?
 
-Source: Adventure Works DW 2020 - Microsoft sample data.
+## Dataset
+- **Source:** Microsoft AdventureWorksDW2020 sample data, via [pbi-tools/adventureworksdw2020-pbix](https://github.com/pbi-tools/adventureworksdw2020-pbix)
+- **Period:** FY2017–FY2019 (fiscal year, where FY17 = Jul 2017–Jun 2018)
+- **Scope:** 7 tables (Sales fact + Product, Customer, Reseller, Sales Territory, Sales Order, Date dimensions), 121K sales order lines, 31.5K distinct orders
 
-(pbi-tools/adventureworksdw2020-pbix on GitHub)
+## Headline Numbers
+| Total Sales | Total Profit | Avg. Order Value | Total Orders |
+|---|---|---|---|
+| $109.8M | $12.6M | $3.5K | 31.5K |
 
-**Note: ** The researcher has assumed that FY17 = 07/2017 - 08/2018
+## Key Insights
 
-**#4. Headline**
+1. **Reseller drives volume, not profit.** The channel generates 73% of 
+   revenue ($80.5M) but only 4% of total profit ($0.5M) — a 0.6% margin, 
+   compared to 41.2% for Internet Sales. This isn't from an explicit 
+   discount line (none exists in the fact table) — it's that product cost 
+   runs close to the reseller sell price. This may be a deliberate trade-off: 
+   sacrificing reseller margin to gain market reach, effectively subsidized 
+   by the higher-margin Internet channel.
 
-**- Total Sales:** $109.8M
+   | Channel | Sales | Profit | Margin |
+   |---|---|---|---|
+   | Reseller | $80.5M (73%) | $0.5M | 0.6% |
+   | Internet | $29.4M (27%) | $12.1M | 41.2% |
 
-**- Total Profit:** $12.6M
+2. **Steady, accelerating growth.** Sales grew from $23.9M (FY17) to 
+   $34.1M (FY18, +43%) to $51.9M (FY19, +52%).
 
-**- Average Order Value:** $3.5K
+3. **Bikes dominate the portfolio.** 86% of sales come from a single 
+   category, with Components a distant second (10.75%) — a concentration 
+   that carries supply and pricing-sensitivity risk.
 
-**- Total Orders:** 31.5K
+4. **The US is the core market**, generating $63.0M — over 4x Canada, 
+   the next-largest market.
 
-**#5. Key Insights**
+**Recommendation:** validate whether the Reseller margin trade-off is 
+intentional (a market-reach strategy) or a pricing gap worth closing — 
+and if it's the latter, revisit reseller pricing/cost allocation.
+
+## Dashboard Features
+- Date, country/region, and channel (Internet/Reseller) filters with cross-filtering across all visuals
+- KPI cards, sales trend by fiscal year, category mix, channel performance comparison, country × category matrix, Top 10 customers (unified across both channels)
+
+## Tools & Skills
+Power BI Desktop · Power Query · DAX (CALCULATE, RANKX, RELATED, DISTINCTCOUNT, custom fiscal year logic) · Data modeling (star schema, relationship management)
+
+## Technical Notes
+- Three different "geography" paths exist in the model (Customer, Reseller, Sales Territory) — only Sales Territory covers all sales, so country totals are built from that table to reconcile with the $109.8M grand total.
+- Order counts use distinct order number, not order line key, to avoid understating Average Order Value.
+- Built a unified "Customer Name" column (Online Buyer + Reseller) so Top 10 Customers reflects the whole business, not just online buyers.
+
+## Repository
+- `Adventure_Works_Sales_Dashboard.pbix`: open with Power BI Desktop
+- `images/`: dashboard screenshots
+
+## Contact
+Ms. Trinh (Duong) · Email: trinhduongngoc2301@gmail.com
 
 
