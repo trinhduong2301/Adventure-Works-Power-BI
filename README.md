@@ -65,7 +65,7 @@ and if it's the latter, revisit reseller pricing/cost allocation.
 - Built a unified "Customer Name" column (Online Buyer + Reseller) so Top 10 Customers reflects the whole business, not just online buyers.
 
 ## Repository
-`Adventure_Work_Sales_Dashboard.pbix`: open with Power BI Desktop
+`Adventure_Works_Sales_Dashboard.pbix`: open with Power BI Desktop
 
 ## Contact
 Ms. Trinh (Duong) · Email: trinhduongngoc2301@gmail.com
