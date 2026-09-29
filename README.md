@@ -2,7 +2,7 @@
 
 Interactive Power BI dashboard analyzing AdventureWorks' sales and profitability across its two sales channels (Internet vs. Reseller), FY2017–FY2019, to help management understand where revenue comes from and — more importantly — where it's actually profitable.
 
-![Dashboard overview]<img width="100%" alt="image" src="https://github.com/user-attachments/assets/a85514ab-fdd4-4483-b4cd-3bd3e75f0790" />
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/a85514ab-fdd4-4483-b4cd-3bd3e75f0790" />
 
 ## Business Objective
 This dashboard answers three questions for management:
