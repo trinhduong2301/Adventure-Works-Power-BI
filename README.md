@@ -2,9 +2,7 @@
 
 Interactive Power BI dashboard analyzing AdventureWorks' sales and profitability across its two sales channels (Internet vs. Reseller), FY2017–FY2019, to help management understand where revenue comes from and — more importantly — where it's actually profitable.
 
-![Dashboard overview]
-
-<img width="599" height="335" alt="image" src="https://github.com/user-attachments/assets/a85514ab-fdd4-4483-b4cd-3bd3e75f0790" />
+![Dashboard overview]<img width="100%" alt="image" src="https://github.com/user-attachments/assets/a85514ab-fdd4-4483-b4cd-3bd3e75f0790" />
 
 ## Business Objective
 This dashboard answers three questions for management:
@@ -15,7 +13,7 @@ This dashboard answers three questions for management:
 ## Dataset
 - **Source:** Microsoft AdventureWorksDW2020 sample data, via [pbi-tools/adventureworksdw2020-pbix](https://github.com/pbi-tools/adventureworksdw2020-pbix)
 - **Period:** FY2017–FY2019 (fiscal year, where FY17 = Jul 2017–Jun 2018)
-- **Scope:** 7 tables (Sales fact + Product, Customer, Reseller, Sales Territory, Sales Order, Date dimensions), 121K sales order lines, 31.5K distinct orders
+- **Scope:** 7 tables (Sales fact + Product, Customer, Reseller, Sales Territory, Sales Order, Date dimensions), 121.3K sales order lines, 31.5K distinct orders
 
 ## Headline Numbers
 | Total Sales | Total Profit | Avg. Order Value | Total Orders |
@@ -64,8 +62,7 @@ Power BI Desktop · Power Query · DAX (CALCULATE, RANKX, RELATED, DISTINCTCOUNT
 - Built a unified "Customer Name" column (Online Buyer + Reseller) so Top 10 Customers reflects the whole business, not just online buyers.
 
 ## Repository
-- `Adventure_Works_Sales_Dashboard.pbix`: open with Power BI Desktop
-- `images/`: dashboard screenshots
+`Adventure_Work_Sales_Dashboard.pbix`: open with Power BI Desktop
 
 ## Contact
 Ms. Trinh (Duong) · Email: trinhduongngoc2301@gmail.com
