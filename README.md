@@ -54,7 +54,10 @@ and if it's the latter, revisit reseller pricing/cost allocation.
 - KPI cards, sales trend by fiscal year, category mix, channel performance comparison, country × category matrix, Top 10 customers (unified across both channels)
 
 ## Tools & Skills
-Power BI Desktop · Power Query · DAX (CALCULATE, RANKX, RELATED, DISTINCTCOUNT, custom fiscal year logic) · Data modeling (star schema, relationship management)
+- Power BI Desktop
+- Power Query
+- DAX (CALCULATE, RANKX, RELATED, DISTINCTCOUNT, custom fiscal year logic)
+- Data modeling (star schema, relationship management)
 
 ## Technical Notes
 - Three different "geography" paths exist in the model (Customer, Reseller, Sales Territory) — only Sales Territory covers all sales, so country totals are built from that table to reconcile with the $109.8M grand total.
